@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ფოთკები</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background: linear-gradient(to right, #ff7e5f, #7b9efe); 
+}
+.slider-container{
+    position: relative;
+    width: 500px;
+    overflow: hidden;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.image-container{
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+.btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 20px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.btn.prev{
+    left: 10px;
+}
+
+.btn.next{
+    right: 10px;
+}
+
+.btn:hover{
+    opacity: 1;
+}
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="image-container" style="transform: translateX(-1500px);">
+            <img src="https://scontent.ftbs5-3.fna.fbcdn.net/v/t39.30808-6/334295619_1163328934366110_5907435265362676011_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=gSK-rQuGPFwAX-Fmdvq&_nc_ht=scontent.ftbs5-3.fna&oh=00_AfCmv5NpG6f1zAiz_5gUwtP8C82OUti4WqxWXny9kDjqBw&oe=65F0FFD2" width="500" alt="image">
+            <img src="https://scontent.ftbs5-3.fna.fbcdn.net/v/t31.18172-8/1519790_392729984268579_365616806100535435_o.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=cbwOwDxjEzEAX-eKWuG&_nc_ht=scontent.ftbs5-3.fna&oh=00_AfB2jbWDJq-uvo7Qu6gcKw0hufV5lRYXKrwcws5OFekdCA&oe=6613EFDE" width="500" alt="image">
+            <img src="https://scontent.ftbs5-3.fna.fbcdn.net/v/t31.18172-8/14481767_555859091289000_991700205025849096_o.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=4pswBADaNdsAX_P6M8H&_nc_ht=scontent.ftbs5-3.fna&oh=00_AfAzlPYc8cAmP8-riOdAKk4woNiSOEGxstJQA8285-z82Q&oe=6613F14B" width="500" alt="image">
+        </div>
+        <i class="fas fa-angle-double-left btn prev"></i>
+        <i class="fas fa-angle-double-right btn next"></i>
+    </div>
+    <script src="./app/app.js"></script>
+    <iframe src="about:blank" style="display: none;"></iframe>
+</body>
+</html>
